@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const NewsItemBlock = styled.div`
   display: flex;
@@ -40,6 +40,7 @@ function NewsItem({ article }) {
     <NewsItemBlock>
       {urlToImage && (
         <div className="thumbnail">
+          {/* rel="noopener noreferrer" 새창으로 띄울때 보안 취약점 방지 및 성능 향상 */}
           <a href={url} target="_blank" rel="noopener noreferrer">
             <img src={urlToImage} alt="thumbnail" />
           </a>
